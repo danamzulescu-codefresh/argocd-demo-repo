@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook-canary-rollout
+  name: micro-service-canary-rollout
   namespace: dan-a-eks
 spec:
   destination:
@@ -9,8 +9,8 @@ spec:
     server: https://kubernetes.default.svc
   project: dan-a-eks
   source:
-    path: dev/guestbook-canary-rollout/
-    repoURL: https://github.com/danamzulescu-codefresh/k8s-apps/
+    path: dev/express-microservice-canary-rollout/
+    repoURL: https://github.com/danamzulescu-codefresh/argocd-demo-repo/K8s-Resources/Dev-Dan/Applications/express-microservice-canary-rollout
     targetRevision: HEAD
   syncPolicy:
     automated:
