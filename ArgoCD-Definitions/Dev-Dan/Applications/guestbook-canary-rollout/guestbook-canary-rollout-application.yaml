@@ -10,8 +10,7 @@ spec:
   project: dan-a-eks
   source:
     path: guestbook-canary-rollout/
-    repoURL: https://github.com/danamzulescu-codefresh/argocd-demo-repo/K8s-Resources/Dev-Dan/Applications/guestbook-canary-rollout
-    targetRevision: HEAD
+    repoURL: https://github.com/danamzulescu-codefresh/argocd-demo-repo/K8s-Resources/Dev-Dan/Applications
   syncPolicy:
     automated:
       prune: true
