@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: dan-a-eks
   source:
-    path: dev/guestbook-canary-rollout/
+    path: guestbook-canary-rollout/
     repoURL: https://github.com/danamzulescu-codefresh/argocd-demo-repo/K8s-Resources/Dev-Dan/Applications/guestbook-canary-rollout
     targetRevision: HEAD
   syncPolicy:
