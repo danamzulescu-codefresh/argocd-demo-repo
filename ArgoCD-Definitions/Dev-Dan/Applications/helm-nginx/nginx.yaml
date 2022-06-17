@@ -8,7 +8,7 @@ spec:
  project: dan-a-eks
  source:
    repoURL: https://github.com/danamzulescu-codefresh/argocd-demo-repo
-   path: K8s-Resources/Dev-Dan/Applications/helm-nginx/
+   path: K8s-Resources/Dev-Dan/Applications/helm-nginx
    helm:
      parameters:
        - name: service.type
