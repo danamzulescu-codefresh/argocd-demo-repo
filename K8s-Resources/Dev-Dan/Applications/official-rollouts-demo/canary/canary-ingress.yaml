@@ -9,7 +9,7 @@ metadata:
     ingress.kubernetes.io/app-root: /
 spec:
   rules:
-  - host: dan404.sa.cf-cd.com
+  - host: dan-canary-demo.sa.cf-cd.com
     http:
       paths:
       - path: /
