@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: success-rate
+  namespace: dan-a-eks
+spec:
+  args:
+  - name: ingress
+  metrics:
+  - name: success-rate
+    interval: 10s
+    successCondition: result[0] > 0.90
+    provider:
+      prometheus:
+        address: http://prometheus-k8s.monitoring.svc:9090
+        query: >+
+          sum(
+            irate(nginx_ingress_controller_requests{ingress="{{args.ingress}}",status="200"}[1m])) 
+            / 
+            (sum(irate(nginx_ingress_controller_requests{ingress="{{args.ingress}}",status="200"}[1m])) 
+            + 
+            sum(irate(nginx_ingress_controller_requests{ingress="{{args.ingress}}",status="500"}[1m])) 
+          )
