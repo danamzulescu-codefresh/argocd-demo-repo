@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: canary-demo
-        image: argoproj/rollouts-demo:purple
+        image: argoproj/rollouts-demo:yellow
         imagePullPolicy: Always
         ports:
         - name: http
@@ -28,6 +28,11 @@ spec:
             cpu: 5m
   strategy:
     canary:
+      analysis:
+        templateName: success-rate
+        args:
+        - name: ingress
+          value: canary-demo
       canaryService: canary-demo-preview
       steps:
       - setWeight: 20
