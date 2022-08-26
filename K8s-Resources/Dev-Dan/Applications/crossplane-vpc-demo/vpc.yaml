@@ -10,12 +10,8 @@ spec:
     enableDnsSupport: true
     enableDnsHostNames: true
     tags:
-    - key: Environment
-      value: Production
-    - key: Owner
-      value: Pavan
     - key: Name
-      value: production-vpc
+      value: dan-crossplane-demo
     instanceTenancy: default
   providerConfigRef:
     name: aws-provider
