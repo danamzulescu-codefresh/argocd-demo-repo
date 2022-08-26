@@ -12,6 +12,12 @@ spec:
     tags:
     - key: Name
       value: dan-crossplane-demo
+    - key: crossplane-kind
+      value: vpc.ec2.aws.crossplane.io
+    - key: crossplane-name
+      value: crossplane-vpc-demo
+    - key: crossplane-providerconfig
+      value: aws-provider
     instanceTenancy: default
   providerConfigRef:
     name: aws-provider
