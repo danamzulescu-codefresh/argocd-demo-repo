@@ -7,7 +7,7 @@ metadata:
 spec:
  project: dan-a-eks
  source:
-   repoURL: https://bitbucket.org/dan-codefresh/argocd-demo-repo
+   repoURL: https://github.com/dan-codefresh/argocd-demo-repo
    path: ArgoCD-Definitions/Dev-Dan/Applications/crossplane-vpc-demo
  destination:
    namespace: crossplane-vpc-demo
