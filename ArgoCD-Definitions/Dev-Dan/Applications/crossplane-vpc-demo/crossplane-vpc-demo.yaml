@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: crossplane-vpc-demo
+  labels:
+    app: crossplane-vpc-demo
+spec:
+ project: dan-a-eks
+ source:
+   repoURL: https://bitbucket.org/dan-codefresh/argocd-demo-repo
+   path: ArgoCD-Definitions/Dev-Dan/Applications/crossplane-vpc-demo
+ destination:
+   namespace: crossplane-vpc-demo
+   name: in-cluster
+ syncPolicy:
+   automated: {}
+   syncOptions:
+     - CreateNamespace=true
