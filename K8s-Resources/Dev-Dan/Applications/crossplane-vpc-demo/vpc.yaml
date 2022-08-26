@@ -18,4 +18,4 @@ spec:
       value: production-vpc
     instanceTenancy: default
   providerConfigRef:
-    name: awsconfig
+    name: aws-provider
