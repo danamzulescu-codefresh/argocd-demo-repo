@@ -8,7 +8,7 @@ spec:
  project: dan-a-eks
  source:
    repoURL: https://github.com/danamzulescu-codefresh/argocd-demo-repo
-   path: K8s-Resources/Dev-Dan/Applications/crossplane-vpc-demo
+   path: K8s-Resources/Dev-Dan/Applications/crossplane-demo
  destination:
    namespace: crossplane-vpc-demo
    name: in-cluster
