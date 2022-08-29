@@ -1,7 +1,7 @@
 apiVersion: lambda.aws.crossplane.io/v1beta1
 kind: Function
 metadata:
-  name: color-service
+  name: color-service-green
 spec:
   forProvider:
     packageType: Image
