@@ -8,7 +8,7 @@ spec:
     code:
       imageURI: 336151728602.dkr.ecr.us-east-1.amazonaws.com/dan-a/color-service:red
     roleRef:
-      name: crossplane-lambda-role
+      name: crossplane-admin
     region: us-east-1
     tags:
       user: dan
