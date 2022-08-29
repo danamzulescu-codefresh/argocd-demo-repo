@@ -6,7 +6,7 @@ spec:
   forProvider:
     packageType: Image
     code:
-      imageURI: 336151728602.dkr.ecr.us-east-1.amazonaws.com/dan-a/color-service:green
+      imageURI: 336151728602.dkr.ecr.us-east-1.amazonaws.com/dan-a/color-service:blue
     role: arn:aws:iam::336151728602:role/crossplane-lambda-role
     region: us-east-1
     tags:
