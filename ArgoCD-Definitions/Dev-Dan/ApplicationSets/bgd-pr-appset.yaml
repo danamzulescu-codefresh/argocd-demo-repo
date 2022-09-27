@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: bgd-pr-testing
+  namespace: dan-a-eks
+spec:
+  generators:
+  - pullRequest:
+      github:
+        owner: danamzulescu-codefresh
+        repo: argocd-demo-repo
+        labels:
+        - preview
+      requeueAfterSeconds: 5
+  template:
+    metadata:
+      name: 'bgd-{{branch}}-{{number}}'
+    spec:
+      source:
+        repoURL: 'https://github.com/danamzulescu-codefresh/argocd-demo-repo'
+        targetRevision: '{{head_sha}}'
+        path: K8s-Resources/Dev-Dan/Applications/bgd-pr-testing
+      project: default
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: 'bgd-{{branch}}-{{number}}'
