@@ -9,6 +9,9 @@ spec:
       github:
         owner: danamzulescu-codefresh
         repo: argocd-demo-repo
+        tokenRef:
+          secretName: github-token
+          key: password
         labels:
         - preview
       requeueAfterSeconds: 5
