@@ -19,7 +19,7 @@ spec:
       source:
         repoURL: 'https://github.com/danamzulescu-codefresh/argocd-demo-repo'
         targetRevision: '{{head_sha}}'
-        path: K8s-Resources/Dev-Dan/Applications/bgd-pr-testing
+        path: K8s-Resources/Dev-Dan/Applications/bgd-pr-testing/overlays/default
       project: default
       syncPolicy:
         automated:
