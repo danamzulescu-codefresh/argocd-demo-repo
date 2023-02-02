@@ -7,7 +7,7 @@ spec:
   destination:
     namespace: dan-a-eks
     server: https://kubernetes.default.svc
-  project: dan-a-eks
+  project: default
   source:
     path: K8s-Resources/Dev-Dan/Applications/official-rollouts-demo/canary
     repoURL: https://github.com/danamzulescu-codefresh/argocd-demo-repo
